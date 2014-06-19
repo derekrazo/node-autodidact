@@ -1,7 +1,11 @@
-var summary = require('./node_modules/node-tldr');
+var summary = require('node-tldr');
+
+var url = 'https://www.loomio.org/d/LuAlGpC3/introduce-yourself-to-the-loomio-community';
 
 
-summary.summarize('http://thenextweb.com/apps/2014/05/28/skillz-brings-real-money-gaming-platform-ios', function(title, summary, failure) {
+
+
+summary.summarize(url,function(title, summary, failure) {
 	if (failure) {
 		console.log("An error occured!");
 	}
@@ -10,3 +14,4 @@ summary.summarize('http://thenextweb.com/apps/2014/05/28/skillz-brings-real-mone
 	console.log(summary.join("\n"));
 
 });
+
